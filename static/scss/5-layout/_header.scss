@@ -1,0 +1,55 @@
+// ********************
+// HEADER
+// ********************
+
+#header {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 5rem;
+  background-color: $white;
+  box-shadow: 0 10px 15px -3px rgba($black, 0.1),
+    0 4px 6px -4px rgba($black, 0.1);
+  border-top: 10px solid $navy;
+}
+
+.container--header {
+  @extend .container;
+  height: 100%;
+}
+
+.header__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ********************
+// MENU
+// ********************
+
+.header__menu,
+.menu__items {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.25rem;
+}

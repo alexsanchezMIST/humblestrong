@@ -1,0 +1,398 @@
+// ********************
+// HERO SECTION
+// ********************
+
+#hero {
+  background-color: $blue;
+  background-image: linear-gradient(to top right, $navy, $blue);
+
+  .container {
+    position: relative;
+    z-index: 100;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 25;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("static/img/kerby-court.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: saturate(0%) brightness(80%);
+    mix-blend-mode: overlay;
+  }
+}
+
+.hero__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(auto, minmax(0, min-content));
+  gap: 3.75rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.hero__heading {
+  color: $white;
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.hero__subheading {
+  color: map-get($slate, "200");
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.hero__img {
+  display: none;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    display: block;
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50vw;
+    background-image: url("static/img/kerby-coaching-lossy.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: drop-shadow(10px 0 6px rgba($black, 0.1));
+  }
+}
+
+// ********************
+// INTRO SECTION
+// ********************
+
+.section__helmet {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  max-width: 65ch;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.intro__heading {
+  @extend .hero__heading;
+  color: map-get($slate, "900");
+}
+
+.intro__subheading {
+  @extend .hero__subheading;
+  margin-bottom: unset;
+  color: map-get($slate, "500");
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+// ********************
+// SUCCESS SECTION
+// ********************
+
+#success {
+  background-color: map-get($slate, "50");
+}
+
+.success__wrapper {
+  @extend .hero__wrapper;
+}
+
+.success__heading {
+  @extend .intro__heading;
+}
+
+.success__subheading {
+  @extend .hero__subheading;
+  color: map-get($slate, "500");
+}
+
+.success__left,
+.success__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.success__left {
+  position: relative;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2.5rem;
+    left: -5rem;
+    width: 10rem;
+    height: 10rem;
+    background-image: url("static/img/blue-rectangle.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+.success__right {
+  align-items: flex-start;
+}
+
+.success__img {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 50px rgba($black, 0.25));
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    width: 100%;
+  }
+}
+
+// ********************
+// BULLETS SECTION
+// ********************
+
+.bullets__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(auto, minmax(0, 1fr));
+  gap: 1.875rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.bullets__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+  border: 1px solid map-get($slate, "100");
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba($black, 0.1), 0 2px 4px -2px rgba($black, 0.1);
+}
+
+.bullets__heading {
+  margin-bottom: 1.25rem;
+}
+
+// ********************
+// OPTIN SECTION
+// ********************
+
+.optin__wrapper {
+  @extend .hero__wrapper;
+}
+
+.optin__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.optin__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("static/img/gray-rectangle-outline.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90% 90%;
+}
+
+.optin__mockup {
+  width: 60%;
+  height: auto;
+  box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+  filter: brightness(105%);
+  transform: rotate(2.5deg);
+}
+
+.optin__heading {
+  @extend .intro__heading;
+}
+
+.optin__subheading {
+  margin-bottom: 2.5rem;
+}
+
+// ********************
+// CARE SECTION
+// ********************
+
+.care__wrapper {
+  @extend .hero__wrapper;
+}
+
+.care__heading {
+  @extend .intro__heading;
+}
+
+.care__subheading {
+  @extend .success__subheading;
+}
+
+.care__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 10rem;
+    left: -7.5rem;
+    width: 20rem;
+    height: 20rem;
+    background-image: url("static/img/green-rectangle.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0.8;
+  }
+}
+
+.care__img {
+  @extend .success__img;
+}
+
+.care__right {
+  @extend .success__right;
+}
+
+// ********************
+// CTA SECTION
+// ********************
+
+#cta {
+  background-color: $blue;
+  background-image: linear-gradient(to top right, $navy, $blue);
+  overflow: hidden;
+
+  > * {
+    position: relative;
+    z-index: 100;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("static/img/humblestrong-logo-white.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transform: rotate(-5deg);
+    mix-blend-mode: screen;
+    opacity: 0.1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 25;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("static/img/kerby-turf.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: saturate(0%);
+    mix-blend-mode: overlay;
+  }
+}
+
+.cta__wrapper {
+  @extend .hero__wrapper;
+  align-items: center;
+}
+
+.cta__heading {
+  @extend .hero__heading;
+  margin-bottom: unset;
+}
+
+.cta__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-icon,
+.download-icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-right: 0.5rem;
+}
+
+.phone-icon {
+  background-image: url("static/img/phone.svg");
+}
+
+.download-icon {
+  background-image: url("static/img/download.svg");
+}
+
+.badge {
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: rgba($green, 0.1);
+  color: $green;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.25rem;
+}
