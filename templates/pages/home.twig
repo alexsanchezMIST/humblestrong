@@ -7,9 +7,9 @@
     <div class="container">
         <div class="hero__wrapper">
             <div class="hero__left">
-                <h1 class="hero__heading">{{ post.meta('hero_heading') }}Build rock-solid team trust and commitment</h1>
-                <p class="hero__subheading">{{ post.meta('hero_subheading') }}STOP wasting time and energy with myth-based coaching.</p> 
-                <p class="hero__subheading">START using daily failure and conflict to build the trusting team you've always wanted.</p>
+                <h1 class="hero__heading">{{ post.meta('hero_heading') }}</h1>
+                <p class="hero__subheading">{{ post.meta('hero_subheading') }}</p> 
+                <!-- ß -->
                 <a href="https://app.squarespacescheduling.com/schedule.php?owner=25587643&appointmentType=category:Discovery" target="_blank" class="btn btn--primary"><span class="phone-icon"></span>Book a Call</a>
             </div>
         </div>
@@ -22,10 +22,11 @@
 <section id="intro" class="section py-18">
     <div class="container">
         <div class="section__helmet">
-            <h2 class="intro__heading">Coaching through failure and conflict creates success</h2>
-            <p class="intro__subheading">Your capacity to build trust through failure determines your capacity for success.</p>
+            <h2 class="intro__heading">{{ post.meta('section_one_heading') }}Coaching through failure and conflict creates success</h2>
+            <p class="intro__subheading">{{ post.meta('section_one_subheading') }}Your capacity to build trust through failure determines your capacity for success.</p>
         </div>
         <article class="prose">
+            {{ post.meta('section_one_content') }}
             <p>Sports don't build character but <em>reveal</em> it. In the microwave of sport, your character and that of your players is exposed for everyone to see. Failure and conflict turn up the heat. The myth "winning cures everything" is not the answer. It's a hopeless trap.</p>
             <p>A strategy of eliminating mistakes and avoiding conflict is the path to mediocrity. Habits of blame or deflection only make things worse. If you handle failures and conflicts poorly, you undermine trust, strategy, talent, and culture. Without effective skills to coach through failure and conflict, you guarantee a lost season filled with self-doubt, frustration, and defensiveness.</p>
             <p>It doesn't have to be this way. Failure and conflict are the <em>catalysts</em> for your success. Failure and conflict are opportunities for growing into your potential. You are wired to transform the challenges created by failure and conflict into a committed team. You just don't know how, yet. We can help.</p>
@@ -45,8 +46,8 @@
                 <img src="{{ theme.path ~ '/static/img/kerby-football.webp' }}" alt="" class="success__img">
             </div>
             <div class="success__right">
-                <h2 class="success__heading">Success is not lived or created in a moment.</h2>
-                <p class="success__subheading">Success requires consistently and effectively growing <em>through</em> failure and conflict in the pursuit of championships. The HumbleStrong Advantage helps you understand the value of failure and conflict and transform them into building blocks for success.</p>
+                <h2 class="success__heading">{{ post.meta('section_two_heading') }}Success is not lived or created in a moment.</h2>
+                <p class="success__subheading">{{ post.meta('section_two_subheading') }}Success requires consistently and effectively growing <em>through</em> failure and conflict in the pursuit of championships. The HumbleStrong Advantage helps you understand the value of failure and conflict and transform them into building blocks for success.</p>
                 <a href="https://app.squarespacescheduling.com/schedule.php?owner=25587643&appointmentType=category:Discovery" target="_blank" class="btn btn--primary"><span class="phone-icon"></span>Book a Call</a>
             </div>
         </div>
@@ -59,16 +60,16 @@
     <div class="container">
         <div class="bullets__wrapper">
             <div id="clarity" class="bullets__card">
-                <h3 class="bullets__heading">Gain clarity and confidence.</h3>
-                <p class="bullets__text">Put failure and conflict in their proper context, lead your team through the ups and downs.</p>
+                <h3 class="bullets__heading">{{ post.meta('benefit_one_heading') }}Gain clarity and confidence.</h3>
+                <p class="bullets__text">{{ post.meta('benefit_one_subheading') }}Put failure and conflict in their proper context, lead your team through the ups and downs.</p>
             </div>
             <div id="relationships" class="bullets__card">
-                <h3 class="bullets__heading">Build trusting relationships.</h3>
-                <p class="bullets__text">Create predictability and consistency to create a culture of trust.</p>
+                <h3 class="bullets__heading">{{ post.meta('benefit_two_heading') }}Build trusting relationships.</h3>
+                <p class="bullets__text">{{ post.meta('benefit_two_subheading') }}Create predictability and consistency to create a culture of trust.</p>
             </div>
             <div id="clarity" class="bullets__card">
-                <h3 class="bullets__heading">Super-charge commitment.</h3>
-                <p class="bullets__text">Champions fail and experience conflict. They use them to gain clarity, grow respect, and strengthen commitment.</p>
+                <h3 class="bullets__heading">{{ post.meta('benefit_three_heading') }}Super-charge commitment.</h3>
+                <p class="bullets__text">{{ post.meta('benefit_three_subheading') }}Champions fail and experience conflict. They use them to gain clarity, grow respect, and strengthen commitment.</p>
             </div>
         </div>
     </div>
@@ -81,8 +82,8 @@
         <div class="optin__wrapper">
             <div class="optin__left">
                 <p class="badge">Free Download</p>
-                <h2 class="optin__heading">The HumbleStrong Advantage</h2>
-                <p class="optin__subheading">Three Truths You Must Know to Build Trust and Commitment</p>
+                <h2 class="optin__heading">{{ post.meta('optin_heading') }}The HumbleStrong Advantage</h2>
+                <p class="optin__subheading">{{ post.meta('optin_subheading') }}Three Truths You Must Know to Build Trust and Commitment</p>
                 <form method="post" class="af-form-wrapper optin__form" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl"  >
                     <div style="display: none;">
                         <input type="hidden" name="meta_web_form_id" value="1575689959" />
@@ -160,8 +161,8 @@
                 <img src="{{ theme.path ~ '/static/img/kerby-swim.webp' }}" alt="" class="care__img">
             </div>
             <div class="care__right">
-                <h2 class="care__heading">Coaching is hard. You are enough.</h2>
-                <p class="care__subheading">Creating a successful team is hard. Every year is like starting over. Failure and conflict are inevitable. Every one seems to trigger the "Am I good enough?" self-doubt. Pressure builds up. Failure and conflict feel like constant obstacles blocking success. They're not. Don't burn through your most precious resources—time, trust, and relationships—with trial-and-error tactics. You can learn a better way.</p>
+                <h2 class="care__heading">{{ post.meta('section_three_heading') }}Coaching is hard. You are enough.</h2>
+                <p class="care__subheading">{{ post.meta('section_three_subheading') }}Creating a successful team is hard. Every year is like starting over. Failure and conflict are inevitable. Every one seems to trigger the "Am I good enough?" self-doubt. Pressure builds up. Failure and conflict feel like constant obstacles blocking success. They're not. Don't burn through your most precious resources—time, trust, and relationships—with trial-and-error tactics. You can learn a better way.</p>
                 <a href="https://app.squarespacescheduling.com/schedule.php?owner=25587643&appointmentType=category:Discovery" target="_blank" class="btn btn--primary"><span class="phone-icon"></span>Book a Call</a>
             </div>
         </div>
@@ -173,9 +174,10 @@
 <section id="guide" class="section py-18">
     <div class="container">
         <div class="section__helmet">
-            <h2>We've been there too. We can help.</h2>
+            <h2>{{ post.meta('section_four_heading') }}We've been there too. We can help.</h2>
         </div>
         <article class="prose">
+            {{ post.meta('section_four_content') }}
             <p>After coaching for decades spending too much time stuck in the Insanity Cycle, too many years coaching to eliminate mistakes and avoid conflict, and  thinking winning would fix everything, we learned a better way. We'd love to help you apply it too. You'll transform your team and help them build trust and commitment in the pursuit of championships.</p>
             <div class="btn-wrapper">
                 <a href="https://app.squarespacescheduling.com/schedule.php?owner=25587643&appointmentType=category:Discovery" target="_blank" class="btn btn--primary"><span class="phone-icon"></span>Book a Call</a>
@@ -189,8 +191,8 @@
 <section id="content" class="section py-18">
     <div class="container">
         <div class="section__helmet">
-            <h2 class="intro__heading">The work is hard AND rewarding:<br/>not many choose to do it</h2>
-            <p class="intro__subheading">"What causes me the most stress as a coach is conflict." — Nate Sanderson, High school coach and coaching mentor</p>
+            <h2 class="intro__heading">{{ post.meta('section_five_heading') }}The work is hard AND rewarding:<br/>not many choose to do it</h2>
+            <p class="intro__subheading">{{ post.meta('section_five_subheading') }}"What causes me the most stress as a coach is conflict." — Nate Sanderson, High school coach and coaching mentor</p>
         </div>
         <article class="prose">
             {{ post.content }}
@@ -204,16 +206,16 @@
     <div class="container">
         <div class="bullets__wrapper">
             <div class="bullets__card">
-                <h3 class="bullets__heading">Step 1:</h3>
-                <p class="bullets__text">Book a free call to get unstuck</p>
+                <h3 class="bullets__heading">{{ post.meta('step_one_heading') }}Step 1:</h3>
+                <p class="bullets__text">{{ post.meta('step_one_subheading') }}Book a free call to get unstuck</p>
             </div>
             <div class="bullets__card">
-                <h3 class="bullets__heading">Step 2:</h3>
-                <p class="bullets__text">Enroll in the program to begin transformation</p>
+                <h3 class="bullets__heading">{{ post.meta('step_two_heading') }}Step 2:</h3>
+                <p class="bullets__text">{{ post.meta('step_two_subheading') }}Enroll in the program to begin transformation</p>
             </div>
             <div class="bullets__card">
-                <h3 class="bullets__heading">Step 3:</h3>
-                <p class="bullets__text">Lead HumbleStrong to engage the learning</p>
+                <h3 class="bullets__heading">{{ post.meta('step_three_heading') }}Step 3:</h3>
+                <p class="bullets__text">{{ post.meta('step_three_subheading') }}Lead HumbleStrong to engage the learning</p>
             </div>
         </div>
     </div>
@@ -224,7 +226,7 @@
 <section id="cta" class="section py-20">
     <div class="container">
       <div class="cta__wrapper">
-          <h2 class="cta__heading">Get started by booking your free call!</h2>
+          <h2 class="cta__heading">{{ post.meta('cta_heading') }}Get started by booking your free call!</h2>
           <div class="cta__right">
               <a href="https://app.squarespacescheduling.com/schedule.php?owner=25587643&appointmentType=category:Discovery" target="_blank" class="btn btn--primary"><span class="phone-icon"></span>Book a Call</a>
               <a href="#" class="btn btn--secondary">Learn More</a>
