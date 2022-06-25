@@ -1,0 +1,16 @@
+<section id="content--{{ block.id }}" class="section py-18">
+    <div class="container">
+        <div class="section__helmet">
+            <h2 class="intro__heading">{{ fields.heading }}</h2>
+            {% if fields.description %}
+            <p class="intro__subheading">{{ fields.description }}</p>
+            {% endif %}
+        </div>
+        <article class="prose">
+            {{ fields.content }}
+            <div class="btn-wrapper">
+                <a href="https://app.squarespacescheduling.com/schedule.php?owner=25587643&appointmentType=category:Discovery" target="_blank" class="btn btn--primary"><span class="phone-icon"></span>Let's Connect</a>
+            </div>
+        </article>
+    </div>
+</section>

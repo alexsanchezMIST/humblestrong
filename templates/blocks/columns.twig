@@ -1,0 +1,19 @@
+<section id="columns--{{ block.id }}" class="section py-18">
+    <div class="container">
+        <div class="success__wrapper">
+            <div class="success__left">
+                <img src="{{ theme.path ~ '/static/img/kerby-football.webp' }}" alt="" class="success__img">
+            </div>
+            <div class="success__right">
+                <h2 class="success__heading">{{ fields.heading }}</h2>
+                <p class="success__subheading">{{ fields.description }}</p>
+                {% if fields.has_button %}
+                    <a href="{{ fields.button_link }}" target="_blank" class="btn btn--primary">
+                        <span class="button-icon">{{ Image(fields.button_icon).src }}</span>
+                        {{ fields.button_text }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

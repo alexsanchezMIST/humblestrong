@@ -1,0 +1,15 @@
+<section id="optin--{{ block.id }}" class="section py-18">
+    <div class="container">
+        <div class="optin__wrapper">
+            <div class="optin__left">
+                <p class="badge">Free Download</p>
+                <h2 class="optin__heading">{{ fields.heading }}</h2>
+                <p class="optin__subheading">{{ fields.description }}</p>
+                {% include 'partials/form.twig' %}
+            </div>
+            <div class="optin__right">
+                <img src="{{ theme.path ~ '/static/img/kerby-mockup.webp' }}" alt="" class="optin__mockup">
+            </div>
+        </div>
+    </div>
+</section>

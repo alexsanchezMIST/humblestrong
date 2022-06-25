@@ -1,0 +1,12 @@
+<section id="cards--{{ block.id }}" class="section py-18">
+    <div class="container">
+        <div class="bullets__wrapper">
+            {% for field in fields.card %}
+            <div class="bullets__card">
+                <h3 class="bullets__heading">{{ field.heading }}</h3>
+                <p class="bullets__text">{{ field.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

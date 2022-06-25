@@ -65,8 +65,89 @@ class StarterSite extends Timber\Site {
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action( 'acf/init', [$this, 'my_acf_init'] );
 		parent::__construct();
 	}
+
+	public function my_acf_init() {
+
+		if ( ! function_exists( 'acf_register_block' ) ) {
+			return;
+		}
+
+		$optin = [
+			'name' => 'optin_block',
+			'title' => __('Optin'),
+			'description' => __('A custom optin block.'),
+			'render_callback' => [$this, 'my_acf_block_render_callback'],
+			'category' => 'formatting',
+			'icon' => 'superhero-alt',
+			'keywords' => array('optin', 'content'),
+		];
+
+		$cards = [
+			'name' => 'cards_block',
+			'title' => __('Cards'),
+			'description' => __('A custom cards block.'),
+			'render_callback' => [$this, 'my_acf_block_render_callback'],
+			'category' => 'formatting',
+			'icon' => 'superhero-alt',
+			'keywords' => array('cards', 'content'),
+		];
+		
+		$button = [
+			'name' => 'button_block',
+			'title' => __('Button'),
+			'description' => __('A custom button block.'),
+			'render_callback' => [$this, 'my_acf_block_render_callback'],
+			'category' => 'formatting',
+			'icon' => 'superhero-alt',
+			'keywords' => array('button', 'content'),
+		];
+
+		$content = [
+			'name' => 'content_block',
+			'title' => __('Content'),
+			'description' => __('A custom content block.'),
+			'render_callback' => [$this, 'my_acf_block_render_callback'],
+			'category' => 'formatting',
+			'icon' => 'superhero-alt',
+			'keywords' => array('button', 'content'),
+		];
+
+		$columns = [
+			'name' => 'columns_block',
+			'title' => __('Columns'),
+			'description' => __('A custom columns block.'),
+			'render_callback' => [$this, 'my_acf_block_render_callback'],
+			'category' => 'formatting',
+			'icon' => 'superhero-alt',
+			'keywords' => array('button', 'content'),
+		];
+
+		$blocks = [
+			$optin,
+			$cards,
+			$button,
+			$content,
+			$columns,
+		];
+
+		foreach ($blocks as $block) {
+			acf_register_block_type($block);
+		}
+	}
+
+	public function my_acf_block_render_callback( $block, $content = '', $is_preview = false ) {
+
+		$context = Timber::context();
+		$context['block'] = $block;
+		$context['fields'] = get_fields();
+		$context['is_preview'] = $is_preview;
+
+		Timber::render('blocks/' . strtolower($block['title']) . '.twig', $context );
+	}
+
 	/** This is where you can register custom post types. */
 	public function register_post_types() {
 

@@ -215,6 +215,14 @@ h6 {
   }
 }
 
+.is-centered {
+  text-align: center;
+}
+
+.is-white {
+  color: $white;
+}
+
 // ********************
 // PROSE
 // ********************
@@ -270,6 +278,36 @@ h6 {
     position: relative;
     padding-left: 2.5rem;
 
+    @media screen and (max-width: map-get($breakpoints, "small")) {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      font-size: 1rem;
+      line-height: 1.7rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "2xl")) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -283,4 +321,9 @@ h6 {
       background-size: contain;
     }
   }
+}
+
+.prose img {
+  margin-block: 2.5rem;
+  box-shadow: 0 25px 50px -12px rgba($black, 0.25);
 }
