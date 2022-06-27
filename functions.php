@@ -147,6 +147,18 @@ class StarterSite extends Timber\Site {
 			'supports' => array('mode' => false),
 		];
 
+		$hero_alt = [
+			'name' => 'hero_alt_block',
+			'title' => __('Hero-Alt'),
+			'description' => __('A custom hero block.'),
+			'render_callback' => [$this, 'my_acf_block_render_callback'],
+			'category' => 'formatting',
+			'icon' => 'superhero-alt',
+			'keywords' => array('hero', 'content'),
+			'mode' => 'edit',
+			'supports' => array('mode' => false),
+		];
+
 		$blocks = [
 			$optin,
 			$cards,
@@ -154,6 +166,7 @@ class StarterSite extends Timber\Site {
 			$content,
 			$columns,
 			$hero,
+			$hero_alt,
 		];
 
 		foreach ($blocks as $block) {
