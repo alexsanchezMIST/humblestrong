@@ -3,7 +3,7 @@
         <div class="success__wrapper">
             <div class="success__left">
             {% if fields.image %}
-                <img src="{{ Image(fields.image).src }}" />
+                <img src="{{ fields.image }}" />
             {% else %}
                 <img src="{{ theme.path ~ '/static/img/kerby-football.webp' }}" alt="" class="success__img">
             {% endif %}
