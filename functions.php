@@ -130,7 +130,19 @@ class StarterSite extends Timber\Site {
 			'render_callback' => [$this, 'my_acf_block_render_callback'],
 			'category' => 'formatting',
 			'icon' => 'superhero-alt',
-			'keywords' => array('button', 'content'),
+			'keywords' => array('columns', 'content'),
+			'mode' => 'edit',
+			'supports' => array('mode' => false),
+		];
+
+		$hero = [
+			'name' => 'hero_block',
+			'title' => __('Hero'),
+			'description' => __('A custom hero block.'),
+			'render_callback' => [$this, 'my_acf_block_render_callback'],
+			'category' => 'formatting',
+			'icon' => 'superhero-alt',
+			'keywords' => array('hero', 'content'),
 			'mode' => 'edit',
 			'supports' => array('mode' => false),
 		];
@@ -141,6 +153,7 @@ class StarterSite extends Timber\Site {
 			$button,
 			$content,
 			$columns,
+			$hero,
 		];
 
 		foreach ($blocks as $block) {
