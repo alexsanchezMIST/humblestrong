@@ -3,7 +3,7 @@
         <div class="success__wrapper">
             <div class="success__left">
             {% if fields.image %}
-                <img src="{{ fields.image }}" />
+                <img src="{{ fields.image }}" class="success__img" />
             {% else %}
                 <img src="{{ theme.path ~ '/static/img/kerby-football.webp' }}" alt="" class="success__img">
             {% endif %}
@@ -13,7 +13,7 @@
                 <p class="success__subheading">{{ fields.description }}</p>
                 {% if fields.has_button %}
                     <a href="{{ fields.button_link }}" target="_blank" class="btn btn--primary">
-                        <span class="button-icon">{{ Image(fields.button_icon).src }}</span>
+                        <span class="button-icon">{{ fields.button_icon }}</span>
                         {{ fields.button_text }}
                     </a>
                 {% endif %}
