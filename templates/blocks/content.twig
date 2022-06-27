@@ -8,9 +8,14 @@
         </div>
         <article class="prose">
             {{ fields.content }}
-            <div class="btn-wrapper">
-                <a href="https://app.squarespacescheduling.com/schedule.php?owner=25587643&appointmentType=category:Discovery" target="_blank" class="btn btn--primary"><span class="phone-icon"></span>Let's Connect</a>
-            </div>
+            {% if fields.has_button %}
+                <div class="btn-wrapper">
+                    <a href="{{ fields.button_link }}" target="_blank" class="btn btn--primary">
+                    <span class="button-icon">{{ Image(fields.button_icon).src }}</span>
+                    {{ fields.button_text }}
+                    </a>
+                </div>
+            {% endif %}
         </article>
     </div>
 </section>

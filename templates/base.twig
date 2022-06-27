@@ -20,6 +20,9 @@
 </main>
 
 		{% block footer %}
+			{# BEGIN FOOTER #} 
+			{% include 'partials/footer.twig' %}
+			{# END FOOTER #}
 			{{ function('wp_footer') }}
 		{% endblock %}
 	</body>

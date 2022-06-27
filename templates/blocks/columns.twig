@@ -2,7 +2,11 @@
     <div class="container">
         <div class="success__wrapper">
             <div class="success__left">
+            {% if fields.image %}
+                <img src="{{ Image(fields.image).src }}" />
+            {% else %}
                 <img src="{{ theme.path ~ '/static/img/kerby-football.webp' }}" alt="" class="success__img">
+            {% endif %}
             </div>
             <div class="success__right">
                 <h2 class="success__heading">{{ fields.heading }}</h2>

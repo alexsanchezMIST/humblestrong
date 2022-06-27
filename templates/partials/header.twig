@@ -6,6 +6,13 @@
                 <img src="{{ theme.path ~ '/static/img/humblestrong-logo.svg' }}" alt="" class="header__logo">
             </a>
             <div class="header__menu">
+                <ul class="menu__items">
+                    {% for item in menu.items %}
+                        <li class="menu__item">
+                            <a href="{{ item.link }}" class="menu__link">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
                 <a href="https://app.squarespacescheduling.com/schedule.php?owner=25587643&appointmentType=category:Discovery" target="_blank" class="nav__btn"><span class="phone-icon"></span>Let's connect</a>
             </div>
         </div>

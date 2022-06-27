@@ -53,3 +53,16 @@
   align-items: center;
   margin: 0 1.25rem;
 }
+
+.menu__link {
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 500;
+  color: map-get($slate, "400");
+  transition: color 0.3s;
+  white-space: nowrap;
+
+  &:hover {
+    color: $blue;
+  }
+}

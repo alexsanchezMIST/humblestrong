@@ -83,6 +83,8 @@ class StarterSite extends Timber\Site {
 			'category' => 'formatting',
 			'icon' => 'superhero-alt',
 			'keywords' => array('optin', 'content'),
+			'mode' => 'edit',
+			'supports' => array('mode' => false),
 		];
 
 		$cards = [
@@ -93,6 +95,8 @@ class StarterSite extends Timber\Site {
 			'category' => 'formatting',
 			'icon' => 'superhero-alt',
 			'keywords' => array('cards', 'content'),
+			'mode' => 'edit',
+			'supports' => array('mode' => false),
 		];
 		
 		$button = [
@@ -103,6 +107,8 @@ class StarterSite extends Timber\Site {
 			'category' => 'formatting',
 			'icon' => 'superhero-alt',
 			'keywords' => array('button', 'content'),
+			'mode' => 'edit',
+			'supports' => array('mode' => false),
 		];
 
 		$content = [
@@ -113,6 +119,8 @@ class StarterSite extends Timber\Site {
 			'category' => 'formatting',
 			'icon' => 'superhero-alt',
 			'keywords' => array('button', 'content'),
+			'mode' => 'edit',
+			'supports' => array('mode' => false),
 		];
 
 		$columns = [
@@ -123,6 +131,8 @@ class StarterSite extends Timber\Site {
 			'category' => 'formatting',
 			'icon' => 'superhero-alt',
 			'keywords' => array('button', 'content'),
+			'mode' => 'edit',
+			'supports' => array('mode' => false),
 		];
 
 		$blocks = [
@@ -165,7 +175,7 @@ class StarterSite extends Timber\Site {
 		$context['foo']   = 'bar';
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
-		$context['menu']  = new Timber\Menu('menu');
+		$context['menu']  = new Timber\Menu();
 		$context['site']  = $this;
 		return $context;
 	}
