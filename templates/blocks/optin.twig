@@ -2,13 +2,16 @@
     <div class="container">
         <div class="optin__wrapper">
             <div class="optin__left">
-                <p class="badge">Free Download</p>
+                <p class="badge">{{ fields.badge }}</p>
                 <h2 class="optin__heading">{{ fields.heading }}</h2>
                 <p class="optin__subheading">{{ fields.description }}</p>
-                {% include 'partials/form.twig' %}
+                {{ fields.form }} 
             </div>
             <div class="optin__right">
-                <img src="{{ theme.path ~ '/static/img/kerby-mockup.webp' }}" alt="" class="optin__mockup">
+                {% if fields.image %}
+                    <img src="{{ Image(fields.image).src }}" alt="" class="optin__mockup">
+                {% endif %}
+                {# <img src="{{ theme.path ~ '/static/img/kerby-mockup.webp' }}" alt="" class="optin__mockup"> #}
             </div>
         </div>
     </div>
